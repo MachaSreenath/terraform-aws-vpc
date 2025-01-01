@@ -5,8 +5,8 @@ With the help of terraform we are developing a complete VPC creation infrastruct
 Not only VPC, we are creating following also:
 
 -  Internet Gateway
--  Public and Private Route Tables
 -  Public and Private Subnets
+-  Public and Private Route Tables
 -  NAT Gateway
 
 
