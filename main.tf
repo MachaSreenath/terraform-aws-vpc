@@ -49,3 +49,17 @@ resource "aws_subnet" "private" {
     }
   )
 }
+
+resource "aws_subnet" "database" {
+  count = length(var.database_subnets_cidr)
+  vpc_id     = aws_vpc.main.id
+  cidr_block = var.database_subnets_cidr[count.index]
+  availability_zone = local.az_names[count.index]
+  tags = merge(
+    var.common_tags,
+    var.database_subnets_tags,
+    {
+      Name = "${local.name}-database-${local.az_names[count.index]}"
+    }
+  )
+}
