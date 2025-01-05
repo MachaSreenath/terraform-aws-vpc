@@ -11,8 +11,8 @@ Here we are using High Availability(HA) - by this we can get how many availabili
 -  Public, Private and Database Route Tables
 -  Routes
 -  Subnets Association
--  Peering connection between VPC's
--  And finally adding routes to the route tables for the peering connection.
+-  VPC peering if user want to create it.
+-  And the peering route is default VPC, if user didnt give the acceptor VPC explicitly.
 
 
 
