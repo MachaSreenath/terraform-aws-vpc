@@ -46,4 +46,5 @@ Here we are using High Availability(HA) - by this we can get how many availabili
 - is_peering_required - Default value is false
 - acceptor_vpc_id - here default is default VPC id, user can override this
 
-
+## Outputs
+- vpc_id - VPC ID created
