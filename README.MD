@@ -1,14 +1,14 @@
 ### This is the module of the VPC creation 
 
-With the help of terraform we are developing a complete VPC creation infrastructure as code. This is the module of the VPC creation. 
+This module creates following resources, 
+Here we are using High Availability(HA) - by this we can get how many availability zones we want automatically by using slice function.(Refer in locals.tf file)
 
-Not only VPC, we are creating following also:
-
+-  VPC
 -  Internet Gateway
--  Public and Private Subnets
+-  Public, Private and Database Subnets each two. 
 -  Elastic IP
 -  NAT Gateway
--  Public and Private Route Tables
+-  Public, Private and Database Route Tables
 -  Routes
 -  Subnets Association
 -  Peering connection between VPC's
