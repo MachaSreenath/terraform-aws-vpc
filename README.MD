@@ -48,3 +48,6 @@ Here we are using High Availability(HA) - by this we can get how many availabili
 
 ## Outputs
 - vpc_id - VPC ID created
+- public_subnet_ids - 2 public subnet ID's created
+- private_subnet_ids - 2 private subnet ID's created
+- database_subnet_ids - 2 database subnet ID's created
