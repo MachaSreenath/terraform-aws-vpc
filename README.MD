@@ -1,4 +1,4 @@
-### This is the module of the VPC creation 
+## This is the module of the VPC creation 
 
 This module creates following resources, 
 Here we are using High Availability(HA) - by this we can get how many availability zones we want automatically by using slice function.(Refer in locals.tf file)
@@ -15,8 +15,8 @@ Here we are using High Availability(HA) - by this we can get how many availabili
 - And the peering route in default VPC, if user didnt give the acceptor VPC explicitly.
 - Adding the peering routes in public, private and database route tables.
 
-### Inputs
-## Required Tags
+## Inputs
+### Required Tags
 - project_name- your project name 
 - environment - which environment you are working
 
@@ -24,7 +24,7 @@ Here we are using High Availability(HA) - by this we can get how many availabili
 - private_subnets_cidr - user must provide 2 subnets CIDR
 - database_subnets_cidr - user must provide 2 subnets CIDR
 
-## Optional Tags
+### Optional Tags
 - vpc_cidr - Default is 10.0.0.0/16, user can override this
 - vpc_peering_tags - Default is empty, type is map
 - vpc_tags - Default is empty, type is map
