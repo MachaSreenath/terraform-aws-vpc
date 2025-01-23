@@ -66,6 +66,7 @@ resource "aws_subnet" "database" {
   )
 }
 
+# Because of database subnets are different in behaviour we are creating a database group and putting the database subnets in this group 
 resource "aws_db_subnet_group" "default" {
   name = "${local.name}"
   subnet_ids = aws_subnet.database[*].id
