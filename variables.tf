@@ -1,21 +1,21 @@
 variable "vpc_cidr" {
-  type = string
+  type    = string
   default = "10.0.0.0/16" # users can override
 }
 
 variable "enable_dns_hostnames" {
-  type = bool
+  type    = bool
   default = true
 }
 
 variable "common_tags" {
-  type = map
+  type    = map(any)
   default = {} # it is optional
 }
 
 variable "vpc_tags" {
-  type = map
-  default = {} 
+  type    = map(any)
+  default = {}
 }
 
 variable "project_name" {
@@ -27,14 +27,14 @@ variable "environment" {
 }
 
 variable "igw_tags" {
-  type = map
+  type    = map(any)
   default = {}
 }
 
 variable "public_subnets_cidr" {
-  type = list
+  type = list(any)
   validation {
-    condition = length(var.public_subnets_cidr) == 2
+    condition     = length(var.public_subnets_cidr) == 2
     error_message = "please provide two valid public subnets cidr"
   }
 }
@@ -44,9 +44,9 @@ variable "public_subnets_tags" {
 }
 
 variable "private_subnets_cidr" {
-  type = list
+  type = list(any)
   validation {
-    condition = length(var.private_subnets_cidr) == 2
+    condition     = length(var.private_subnets_cidr) == 2
     error_message = "please provide two valid private subnets cidr"
   }
 }
@@ -56,9 +56,9 @@ variable "private_subnets_tags" {
 }
 
 variable "database_subnets_cidr" {
-  type = list
+  type = list(any)
   validation {
-    condition = length(var.database_subnets_cidr) == 2
+    condition     = length(var.database_subnets_cidr) == 2
     error_message = "please provide two valid database subnets cidr"
   }
 }
@@ -84,12 +84,12 @@ variable "database_route_table_tags" {
 }
 
 variable "is_peering_required" {
-  type = bool
+  type    = bool
   default = false
 }
 
 variable "acceptor_vpc_id" {
-  type = string
+  type    = string
   default = ""
 }
 
